@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldStateProvider: MonoBehaviour {
-  public Dictionary<string, bool> worldState;
+  public StringBoolDictionary worldState;
 
-  void Start () {
-    setInitialWorldState();
-  }
+  // void Start () {
+  //   setInitialWorldState();
+  // }
 
-  void setInitialWorldState () {
-        worldState = new Dictionary<string, bool>() {
-          {"WorkStationOn", false}
-        };
-  }
+  // void setInitialWorldState () {
+  //       worldState = new StringBoolDictionary() {
+  //         {"WorkStationOn", false}
+  //       };
+  // }
 
   public void changeWorldState (string key, bool value) {
     if(worldState.ContainsKey(key)) {
@@ -22,7 +22,7 @@ public class WorldStateProvider: MonoBehaviour {
       worldState.Add(key, value);
     }
   } 
-  public Dictionary<string, bool> getWorldState () {
+  public StringBoolDictionary getWorldState () {
     return worldState;
   }
 }

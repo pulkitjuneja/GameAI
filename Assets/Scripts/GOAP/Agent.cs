@@ -32,9 +32,9 @@ public sealed class Agent : MonoBehaviour {
 		return currentActions.Count > 0;
 	}
 
-	public Dictionary<string, bool> getCurrentState() {
-		Dictionary<string, bool> agentState = agentStateProvider.getAgentState();
-		Dictionary<string, bool> worldState = worldStateProvider.getWorldState();
+	public StringBoolDictionary getCurrentState() {
+		StringBoolDictionary agentState = agentStateProvider.getAgentState();
+		StringBoolDictionary worldState = worldStateProvider.getWorldState();
 
 		// Merge world state and agent state with conflict priority to world state
 		foreach(KeyValuePair<string,bool> state in worldState) {

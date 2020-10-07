@@ -4,17 +4,15 @@ using System.Collections.Generic;
 using System;
 
 //Todo: see if this can be a scriptableObject
-public class Goal {
 
-  private string goalName;
-  private  Dictionary<string, bool> preconditions;
-  private  Dictionary<string, bool> goalState;
+[CreateAssetMenu (menuName = "GOAP/Goal")]
+public class Goal: ScriptableObject {
 
-  public Goal (string goalName, Dictionary<string, bool> preconditions, Dictionary<string, bool> goals) {
-		this.goalName = goalName;
-    this.preconditions = preconditions;
-    this.goalState = goals;
-  }
+  public string goalName;
+	[SerializeField]
+  public  StringBoolDictionary preconditions;
+	[SerializeField]
+  public StringBoolDictionary goalState;
 
   public void addPrecondition(string key, bool value) {
 		preconditions.Add (key, value);
@@ -40,13 +38,13 @@ public class Goal {
 		}
 	}
 
-	public Dictionary<string, bool> Preconditions {
+	public StringBoolDictionary Preconditions {
 		get {
 			return preconditions;
 		}
 	}
 
-  public Dictionary<string, bool> GoalState {
+  public StringBoolDictionary GoalState {
 		get {
 			return goalState;
 		}

@@ -1,11 +1,12 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu (menuName = "GOAP/Actions/WorkOnProject")]
 public class WorkOnProject : Action {
 
     public bool done;
-    private float intervalTime;
-    private float workDuration = 0.5f;
+    private float interval;
+    public float workDuration = 0.5f;
     public WorkOnProject () {
         done = false;
         addPrecondition("RequiresFood", false);
@@ -26,17 +27,17 @@ public class WorkOnProject : Action {
     }
 
     public override bool perform (Agent agent) {
-        if (intervalTime == 0 ) {
-            intervalTime = Time.time;
+        if (interval == 0 ) {
+            interval = Time.time;
         }
-        if(Time.time - intervalTime > workDuration) {
+        if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.projectWorkCompleted +=5;
             studentData.productivity -= 1;
             if(studentData.projectWorkCompleted >= 100) {
                 done = true;
             }
-            intervalTime = Time.time;
+            interval = Time.time;
         }
         return true;
     }

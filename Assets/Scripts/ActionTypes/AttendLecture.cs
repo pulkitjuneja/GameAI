@@ -1,11 +1,11 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu (menuName = "GOAP/Actions/AttendLecture")]
 public class AttendLecture : Action {
-
     public bool done;
-    private float intervalTime;
-    private float workDuration = 0.5f;
+    private float interval = 0.0f;
+    public float workDuration = 0.5f;
     public AttendLecture () {
         done = false;
         addPrecondition("RequiresFood", false);
@@ -24,18 +24,18 @@ public class AttendLecture : Action {
     }
 
     public override bool perform (Agent agent) {
-        if (intervalTime == 0 ) {
-            intervalTime = Time.time;
+        if (interval == 0.0f ) {
+            interval = Time.time;
         }
-        if(Time.time - intervalTime > workDuration) {
-            Debug.Log(Time.time - intervalTime);
+        if(Time.time - interval > workDuration) {
+            Debug.Log("in");
             Student studentData = agent.agentStateProvider as Student;
             studentData.lectureProgress +=5;
             studentData.productivity -= 1;
             if(studentData.lectureProgress >= 100) {
                 done = true;
             }
-            intervalTime = Time.time;
+            interval = Time.time;
         }
         return true;
     }

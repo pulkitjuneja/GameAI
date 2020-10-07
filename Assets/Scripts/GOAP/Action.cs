@@ -3,22 +3,21 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-//Todo: see if this can be a scriptableObject
-public abstract class Action : MonoBehaviour {
+public abstract class Action : ScriptableObject {
 
-	private Dictionary<string, bool> preconditions;
-	private Dictionary<string, bool> effects;
-	private bool inRange = false;
-	
+	public StringBoolDictionary preconditions;
+	public StringBoolDictionary effects;
+	public bool inRange = false;
 	public float cost = 1f;
+
+	[HideInInspector]
 	public GameObject target;
 	public bool requiresRange;
-
-	public Action() {
-		preconditions = new Dictionary<string, bool> ();
-		effects = new Dictionary<string, bool> ();
+	
+	public Action () {
+		preconditions = new StringBoolDictionary();
+		effects = new StringBoolDictionary();
 	}
-
 	public void doReset() {
 		inRange = false;
 		reset ();
@@ -41,8 +40,8 @@ public abstract class Action : MonoBehaviour {
 	}
 
 	public bool isPlanStillValid(Agent agent) {
-			Dictionary<string, bool> worldState = agent.getCurrentState();
-			Dictionary<string, bool> preconditions = this.preconditions;
+			StringBoolDictionary worldState = agent.getCurrentState();
+			StringBoolDictionary preconditions = this.preconditions;
 			bool result = preconditions.All(precondition => worldState.ContainsKey (precondition.Key) && worldState[precondition.Key] == precondition.Value);
 			return result;
 	}
@@ -67,13 +66,13 @@ public abstract class Action : MonoBehaviour {
 		}
 	}
 	
-	public Dictionary<string, bool> Preconditions {
+	public StringBoolDictionary Preconditions {
 		get {
 			return preconditions;
 		}
 	}
 
-	public Dictionary<string, bool> Effects {
+	public StringBoolDictionary Effects {
 		get {
 			return effects;
 		}

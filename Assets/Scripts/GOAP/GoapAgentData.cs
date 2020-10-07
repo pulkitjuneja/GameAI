@@ -4,9 +4,9 @@ using System;
 
 public abstract class GoapAgentData : MonoBehaviour
 {
-
 	public List<Action> availableActions;
-	protected Queue<Goal> goals;
+	public List<GameObject> actionTargets;
+	public List<Goal> goals;
 	protected bool isMoving = false;
 
 	public void addAction(Action a) {
@@ -18,7 +18,7 @@ public abstract class GoapAgentData : MonoBehaviour
 	}
 
 	public void addGoal(Goal goal) {
-		goals.Enqueue (goal);
+		goals.Add (goal);
 	}
 
 	public Action getAction(Type action) {
@@ -29,26 +29,24 @@ public abstract class GoapAgentData : MonoBehaviour
 		return null;
 	}
 
-	void Start () {
-		availableActions = new List<Action>();
-		goals = new Queue<Goal>();
-		createInitialState();
-		loadActions();
-		createGoals();
-	}
-	private void loadActions ()
-	{
-		Action[] actions = gameObject.GetComponents<Action>();
-		foreach (Action a in actions) {
-			availableActions.Add (a);
+	//TODO: Find a better way to do this
+	public void attachActionTargets () {
+		for(int i = 0; i< availableActions.Count; i++) {
+			if(i < actionTargets.Count) {
+				availableActions[i].target = actionTargets[i];
+			}
 		}
-		Debug.Log("Found actions: " + Action.prettyPrint(actions));
 	}
 
-	public abstract void createGoals();
+	void Start () {
+		createInitialState();
+		attachActionTargets();
+	}
+
+	// public abstract void createGoals();
 	public abstract void createInitialState ();
-	public abstract Dictionary<string, bool> getAgentState ();
-	public abstract Dictionary<string, bool> getPrioritizedGoalState ();
+	public abstract StringBoolDictionary getAgentState ();
+	public abstract StringBoolDictionary getPrioritizedGoalState ();
 	public abstract void planAborted (Action aborter);
 	public abstract bool moveAgent(Action nextAction);
 }

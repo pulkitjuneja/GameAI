@@ -21,15 +21,8 @@ public class Student : GoapAgentData {
     // readingsProgress = 0;
     // projectWorkCompleted = 0;
   }
-  public override void createGoals () {
-    this.addGoal(new Goal("Work", new Dictionary<string, bool> {},
-    new Dictionary<string, bool> {
-     { "projectWorkCompleted", true}
-    }
-    ));
-  }
-  public override Dictionary<string, bool> getAgentState () {
-    Dictionary<string, bool> agentState = new Dictionary<string, bool>();
+  public override StringBoolDictionary getAgentState () {
+    StringBoolDictionary agentState = new StringBoolDictionary();
     agentState.Add("HasToGo", bladder > 60 ? true : false);
     agentState.Add("RequiresFood", hunger > 60 ? true : false);
     agentState.Add("IsProductive", productivity > 60 ? true : false);
@@ -38,12 +31,12 @@ public class Student : GoapAgentData {
     agentState.Add("projectWorkCompleted", projectWorkCompleted > 100 ? true : false);
     return agentState;
   }
-	public override Dictionary<string, bool> getPrioritizedGoalState () {
+	public override StringBoolDictionary getPrioritizedGoalState () {
     // while(goals.Count > 0) {
     //   Goal currentGoal = goals.Dequeue();
 
     // }
-    return goals.Peek().GoalState;
+    return goals[0].GoalState;
   }
   
   public override void planAborted(Action aborter) { }

@@ -5,11 +5,11 @@ using System.Collections;
 public class IdleState: FSMState {
    public void Update (FSM fsm, Agent agent) {
 
-			Dictionary<string, bool> worldState = agent.getCurrentState();
-			Dictionary<string, bool> goal = agent.agentStateProvider.getPrioritizedGoalState();
+			StringBoolDictionary worldState = agent.getCurrentState();
+			StringBoolDictionary goal = agent.agentStateProvider.getPrioritizedGoalState();
 
 			Queue<Action> plan = agent.planner.plan(agent, agent.agentStateProvider.availableActions, worldState, goal);
-			if (plan != null) {
+			if (plan != null && plan.Count > 0) {
 				agent.currentActions = plan;
 
 				fsm.popState();

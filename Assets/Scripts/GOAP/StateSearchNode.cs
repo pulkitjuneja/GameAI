@@ -6,7 +6,7 @@ using System.Linq;
   public class StateSearchNode : IComparable<StateSearchNode>, IEquatable<StateSearchNode> {
 		public StateSearchNode parent;
 		public float runningCost;
-		public Dictionary<string, bool> state;
+		public StringBoolDictionary state;
 		public Action action;
 
 		public int CompareTo(StateSearchNode other)
@@ -45,7 +45,7 @@ using System.Linq;
 				return this.state.GetHashCode();
 		}
 
-		public StateSearchNode(StateSearchNode parent, float runningCost, Dictionary<string, bool> state, Action action) {
+		public StateSearchNode(StateSearchNode parent, float runningCost, StringBoolDictionary state, Action action) {
 			this.parent = parent;
 			this.runningCost = runningCost;
 			this.state = state;

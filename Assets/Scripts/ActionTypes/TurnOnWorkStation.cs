@@ -1,10 +1,11 @@
 using System;
 using UnityEngine;
 
+[CreateAssetMenu (menuName = "GOAP/Actions/TurnOnWorkStation")]
 public class TurnOnWorkStation : Action {
     public bool done;
-    private float intervalTime;
-    private float workDuration = 1.0f;
+    private float interval;
+    public float workDuration = 1.0f;
     public TurnOnWorkStation () {
         done = false;
         addPrecondition("WorkStationOn", false);
@@ -20,11 +21,13 @@ public class TurnOnWorkStation : Action {
     }
 
     public override bool perform (Agent agent) {
-        if (intervalTime == 0 ) {
-            intervalTime = Time.time;
+        if (interval == 0 ) {
+            interval = Time.time;
         }
-        if(Time.time - intervalTime > workDuration) {
-          // TODO: implement screen turn on feature
+        if(Time.time - interval > workDuration) {
+          Debug.Log(target);
+          ScreensComponent screens = target.GetComponent<ScreensComponent>();
+          screens.ToggleScreens(true);
           agent.worldStateProvider.changeWorldState("WorkStationOn", true);
           done = true;
         }
