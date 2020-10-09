@@ -44,7 +44,8 @@ public class Planner
 					minDistanceToGoal = current.runningCost;
 					result = current;
 				}
-				if(!visited.Contains(current)) {
+				bool isVisited = visited.Contains(current);
+				if(!isVisited) {
 					foreach (Action action in availableActions) { 
 						if(inState(action.Preconditions, current.state)) {
 							StringBoolDictionary nextState = populateState (current.state, action.Effects);

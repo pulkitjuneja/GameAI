@@ -7,19 +7,10 @@ public class WorkOnProject : Action {
     public bool done;
     private float interval;
     public float workDuration = 0.5f;
-    public WorkOnProject () {
-        done = false;
-        addPrecondition("RequiresFood", false);
-        addPrecondition("HasToGo", false);
-        addPrecondition("IsProductive", true);
-        addPrecondition("lectureCompleted", true);
-        addPrecondition("readingsCompleted", true);
-        addPrecondition("WorkStationOn", true);
-        addEffect("projectWorkCompleted", true);
-    }
 
     public override void reset() {
         done = false;
+        interval = 0.0f;
     }
 
     public override bool isDone() {

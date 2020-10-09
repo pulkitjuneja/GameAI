@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
-using System.Linq;
 
 public abstract class Action : ScriptableObject {
 
@@ -39,12 +38,6 @@ public abstract class Action : ScriptableObject {
 		this.inRange = inRange;
 	}
 
-	public bool isPlanStillValid(Agent agent) {
-			StringBoolDictionary worldState = agent.getCurrentState();
-			StringBoolDictionary preconditions = this.preconditions;
-			bool result = preconditions.All(precondition => worldState.ContainsKey (precondition.Key) && worldState[precondition.Key] == precondition.Value);
-			return result;
-	}
 
 	public void addPrecondition(string key, bool value) {
 		preconditions.Add (key, value);

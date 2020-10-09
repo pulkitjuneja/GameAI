@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using System;
 
 public abstract class GoapAgentData : MonoBehaviour
@@ -46,7 +47,6 @@ public abstract class GoapAgentData : MonoBehaviour
 	// public abstract void createGoals();
 	public abstract void createInitialState ();
 	public abstract StringBoolDictionary getAgentState ();
-	public abstract StringBoolDictionary getPrioritizedGoalState ();
 	public abstract void planAborted (Action aborter);
 	public abstract bool moveAgent(Action nextAction);
 }

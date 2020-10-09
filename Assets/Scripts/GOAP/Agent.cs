@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 
 public sealed class Agent : MonoBehaviour {
@@ -13,6 +14,8 @@ public sealed class Agent : MonoBehaviour {
 	public GoapAgentData agentStateProvider;
 	public WorldStateProvider worldStateProvider; 
 	public Planner planner;
+	public Goal currentGoal;
+	public float replanCheckInterval;
 
 
 	void Start () {
@@ -25,7 +28,7 @@ public sealed class Agent : MonoBehaviour {
 		stateMachine.pushState (idleState);
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		stateMachine.Update (this);
 	}
 	public bool hasActionPlan() {
@@ -45,6 +48,26 @@ public sealed class Agent : MonoBehaviour {
 			}
 		}
 		return agentState;
+	}
+
+	public bool isPlanStillValid() {
+		StringBoolDictionary worldState = this.getCurrentState();
+		StringBoolDictionary preconditions = this.currentGoal.preconditions;
+		bool result = preconditions.All(precondition => worldState.ContainsKey (precondition.Key) && worldState[precondition.Key] == precondition.Value);
+		return result;
+	}
+
+	public StringBoolDictionary getPrioritizedGoalState (StringBoolDictionary worldState) {
+		foreach (Goal goal in agentStateProvider.goals) {
+      bool instate = goal.preconditions.All(pre => worldState.ContainsKey(pre.Key) && worldState[pre.Key] == pre.Value);
+      if(instate) {
+				this.currentGoal = goal;
+        return goal.GoalState;
+      }
+    }
+    // If no goal was found to match return the least priority goal
+		this.currentGoal = agentStateProvider.goals[agentStateProvider.goals.Count -1];
+    return this.currentGoal.GoalState;
 	}
 
 	public static string prettyPrint(Dictionary<string, object> state) {

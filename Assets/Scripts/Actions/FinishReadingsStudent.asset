@@ -14,18 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preconditions:
     m_keys:
-    - RequiresFood
-    - HasToGo
-    - IsProductive
     - lectureCompleted
     - WorkStationOn
-    m_values: 0000010101
+    m_values: 0101
   effects:
     m_keys:
     - readingsCompleted
     m_values: 01
   inRange: 0
   cost: 1
-  target: {fileID: 3502174779660186420, guid: 76dbdea8062b0624c8f555269b4a6d4a, type: 3}
+  target: {fileID: 0}
   requiresRange: 1
   done: 0
+  workDuration: 0.5

@@ -1,8 +1,6 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System;
 using UnityEngine.AI;
+using System.Collections.Generic;
 
 public class Student : GoapAgentData {
   public int bladder;
@@ -11,6 +9,7 @@ public class Student : GoapAgentData {
   public int lectureProgress;
   public int readingsProgress;
   public int projectWorkCompleted;
+  public List<string> inventory;
 
 
   public override void createInitialState() {
@@ -31,19 +30,11 @@ public class Student : GoapAgentData {
     agentState.Add("projectWorkCompleted", projectWorkCompleted > 100 ? true : false);
     return agentState;
   }
-	public override StringBoolDictionary getPrioritizedGoalState () {
-    // while(goals.Count > 0) {
-    //   Goal currentGoal = goals.Dequeue();
-
-    // }
-    return goals[0].GoalState;
-  }
-  
   public override void planAborted(Action aborter) { }
   
 	public override bool moveAgent(Action nextAction){
     NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>() as NavMeshAgent;
-    Vector3 targetPositionInPlane = new Vector3(nextAction.target.transform.position.x, this.transform.position.y, nextAction.target.transform.position.z);
+    Vector3 targetPositionInPlane = new Vector3(nextAction.target.transform.position.x, 0, nextAction.target.transform.position.z);
     Vector3 distance = transform.position - targetPositionInPlane ;
     if(distance.magnitude <= 5.0f) {
       navMeshAgent.isStopped = true;
@@ -55,9 +46,10 @@ public class Student : GoapAgentData {
       if(navMeshAgent == null) {
         Debug.Log("The object is not a navvmesh agent");
       }
+      navMeshAgent.isStopped = false;
       navMeshAgent.SetDestination(targetPositionInPlane);
       isMoving = true;
-      Debug.Log(isMoving);
+      Debug.Log("Next destination-" + navMeshAgent.destination);
     }
     return false;
   }

@@ -15,8 +15,9 @@ MonoBehaviour:
   goalName: 
   preconditions:
     m_keys:
-    - IsProductive
-    m_values: 00
+    - HasToGo
+    - RequiresFood
+    m_values: 0000
   goalState:
     m_keys:
     - IsProductive

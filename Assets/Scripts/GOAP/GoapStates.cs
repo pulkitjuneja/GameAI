@@ -6,7 +6,7 @@ public class IdleState: FSMState {
    public void Update (FSM fsm, Agent agent) {
 
 			StringBoolDictionary worldState = agent.getCurrentState();
-			StringBoolDictionary goal = agent.agentStateProvider.getPrioritizedGoalState();
+			StringBoolDictionary goal = agent.getPrioritizedGoalState(worldState);
 
 			Queue<Action> plan = agent.planner.plan(agent, agent.agentStateProvider.availableActions, worldState, goal);
 			if (plan != null && plan.Count > 0) {
@@ -40,6 +40,7 @@ public class MoveToState : FSMState {
 }
 
 public class PerformActionState : FSMState {
+	private float replanCheckDiff = 0.0f;
   public void Update (FSM fsm, Agent agent) {
     	if (!agent.hasActionPlan()) {
 				Debug.Log("Done action");
@@ -47,8 +48,8 @@ public class PerformActionState : FSMState {
 				fsm.pushState(agent.idleState);
 				return;
 			}
-
 			Action action = agent.currentActions.Peek();
+
 			if ( action.isDone() ) {
 				agent.currentActions.Dequeue();
 				Debug.Log(Action.prettyPrint(action) + "Done");	
@@ -58,7 +59,12 @@ public class PerformActionState : FSMState {
 			bool inRange = action.requiresInRange() ? action.isInRange() : true;
 
 			if ( inRange ) {
-				bool success = action.isPlanStillValid(agent) && action.perform(agent);
+				bool success = action.perform(agent);
+
+				if(Time.time - replanCheckDiff > agent.replanCheckInterval) {
+					success = success && agent.isPlanStillValid();
+					replanCheckDiff = Time.time;
+				}
 
 				if (!success) {
 					Debug.Log("Plan Failed");

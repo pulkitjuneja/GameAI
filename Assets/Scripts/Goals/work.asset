@@ -15,9 +15,12 @@ MonoBehaviour:
   goalName: work
   preconditions:
     m_keys:
-    - 
-    m_values: 00
+    - HasToGo
+    - RequiresFood
+    - IsProductive
+    m_values: 000001
   goalState:
     m_keys:
     - projectWorkCompleted
-    m_values: 01
+    - WorkStationOn
+    m_values: 0100
