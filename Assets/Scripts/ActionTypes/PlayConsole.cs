@@ -24,6 +24,7 @@ public class PlayConsole : Action {
             Student studentData = agent.agentStateProvider as Student;
             studentData.productivity += 5;
             studentData.hunger += 3;
+            studentData.bladder += 2;
             if(studentData.productivity >= 80) {
                 done = true;
             }

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72d1b97ad4570b04bbd31a9bc5bf7466, type: 3}
   m_Name: DropOffGuitar
   m_EditorClassIdentifier: 
+  actionName: DropOffGuitar
   preconditions:
     m_keys:
     - GuitarPickedUp

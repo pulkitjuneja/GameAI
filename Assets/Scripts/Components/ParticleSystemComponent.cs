@@ -1,18 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StoveFlameComponent : ToggleAbleComponent
+public class ParticleSystemComponent : ToggleAbleComponent
 {
-    public ParticleSystem stoveFlame;
+    public ParticleSystem particleSystem;
 
     public void Start () {
-      stoveFlame.Stop();
+      particleSystem.Stop();
     }
     public override void toggle (bool toggle) {
       if(toggle) {
-        stoveFlame.Play();
+        particleSystem.Play();
       } else {
-        stoveFlame.Stop();
+        particleSystem.Stop();
       }
     }
 

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System;
 
-public abstract class Action : ScriptableObject {
+public abstract class Action : ScriptableObject, IEquatable<Action> {
 
+	public string actionName= "";
 	public StringBoolDictionary preconditions;
 	public StringBoolDictionary effects;
 	public bool inRange = false;
@@ -12,6 +13,28 @@ public abstract class Action : ScriptableObject {
 	[HideInInspector]
 	public GameObject target;
 	public bool requiresRange;
+
+	public bool Equals (Action other) {
+		if(this.name.Equals(other.actionName)) {
+			return true;
+		}
+		return false;
+	}
+
+	public override bool Equals (object other) {
+			if (other == null)
+        return false;
+
+      Action obj = other as Action;
+      if (obj == null)
+         return false;
+      else
+         return Equals(obj);
+	}
+
+	public override int GetHashCode() {
+		return this.actionName.GetHashCode();
+	}
 	
 	public Action () {
 		preconditions = new StringBoolDictionary();

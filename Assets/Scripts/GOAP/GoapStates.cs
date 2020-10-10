@@ -3,12 +3,16 @@ using UnityEngine;
 using System.Collections;
 
 public class IdleState: FSMState {
+		private float replanCheckDiff = 0.0f;
    public void Update (FSM fsm, Agent agent) {
-
+		 Debug.Log("Out");
+		 	if(Time.time - replanCheckDiff > agent.replanCheckInterval) {
+				 		 Debug.Log("In");
 			StringBoolDictionary worldState = agent.getCurrentState();
 			StringBoolDictionary goal = agent.getPrioritizedGoalState(worldState);
 
 			Queue<Action> plan = agent.planner.plan(agent, agent.agentStateProvider.availableActions, worldState, goal);
+					 Debug.Log("Planned");
 			if (plan != null && plan.Count > 0) {
 				agent.currentActions = plan;
 
@@ -20,6 +24,8 @@ public class IdleState: FSMState {
 				fsm.popState ();
 				fsm.pushState (agent.idleState);
 			}
+			replanCheckDiff = Time.time;
+		}
    }
 }
 
@@ -52,7 +58,7 @@ public class PerformActionState : FSMState {
 
 			if ( action.isDone() ) {
 				agent.currentActions.Dequeue();
-				Debug.Log(Action.prettyPrint(action) + "Done");	
+				Debug.Log(Action.log(action) + "Done");	
 			}
 
 			action = agent.currentActions.Peek();

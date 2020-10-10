@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599701bcd2782e4ebce4802c05650e4, type: 3}
   m_Name: WorkOnProjectStudent
   m_EditorClassIdentifier: 
+  actionName: WorkOnProjectStudent
   preconditions:
     m_keys:
     - lectureCompleted

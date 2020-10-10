@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cf26b7dba5c1244eac98de5af443007, type: 3}
   m_Name: FinishReadingsStudent
   m_EditorClassIdentifier: 
+  actionName: FinishReadingsStudent
   preconditions:
     m_keys:
     - lectureCompleted

@@ -24,7 +24,7 @@ public class Student : GoapAgentData {
     StringBoolDictionary agentState = new StringBoolDictionary();
     agentState.Add("HasToGo", bladder > 60 ? true : false);
     agentState.Add("RequiresFood", hunger > 60 ? true : false);
-    agentState.Add("IsProductive", productivity > 60 ? true : false);
+    agentState.Add("IsProductive", productivity > 40 ? true : false);
     agentState.Add("lectureCompleted", lectureProgress > 100 ? true : false);
     agentState.Add("readingsCompleted", readingsProgress > 100 ? true : false);
     agentState.Add("projectWorkCompleted", projectWorkCompleted > 100 ? true : false);

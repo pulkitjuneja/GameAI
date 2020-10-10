@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9e470bc477bdd841ab765df891df9c0, type: 3}
   m_Name: PlayConsoleStudent
   m_EditorClassIdentifier: 
+  actionName: PlayConsoleStudent
   preconditions:
     m_keys:
     - ConsoleOn

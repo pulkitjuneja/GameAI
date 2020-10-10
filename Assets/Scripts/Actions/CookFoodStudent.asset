@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c032fb2dc60df9448ae2df1f8508fed, type: 3}
   m_Name: CookFoodStudent
   m_EditorClassIdentifier: 
+  actionName: CookFoodStudent
   preconditions:
     m_keys:
     - HasRawFood

@@ -22,6 +22,7 @@ public class CookFood : Action {
         }
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
+            studentData.bladder += 2;
             studentData.inventory.Remove("RawFood");
             studentData.inventory.Add("CookedFood");
             done = true;

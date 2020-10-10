@@ -22,6 +22,7 @@ public class EatFood : Action {
         }
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
+            studentData.bladder += 5;
             studentData.inventory.Remove("CookedFood");
             studentData.hunger = Mathf.Clamp(studentData.hunger - 50, 0, 100);
             done = true;

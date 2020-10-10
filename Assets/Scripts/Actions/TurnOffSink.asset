@@ -9,21 +9,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eace7001c513dfd46b063ab72190030b, type: 3}
-  m_Name: PlayGuitarStudent
+  m_Script: {fileID: 11500000, guid: 72d1b97ad4570b04bbd31a9bc5bf7466, type: 3}
+  m_Name: TurnOffSink
   m_EditorClassIdentifier: 
-  actionName: PlayGuitarStudent
+  actionName: TurnOffSink
   preconditions:
     m_keys:
-    - GuitarPickedUp
+    - HandsClean
     m_values: 01
   effects:
     m_keys:
-    - IsProductive
-    m_values: 01
+    - IsWashRoomBeingUsed
+    m_values: 00
   inRange: 0
   cost: 1
   target: {fileID: 0}
-  requiresRange: 1
+  requiresRange: 0
   done: 0
-  workDuration: 0.5
+  workDuration: 1
+  toggle: 0
+  shouldEffectWorldState: 0

@@ -25,6 +25,7 @@ public class FinishReadings : Action {
             studentData.readingsProgress +=5;
             studentData.productivity -= 2;
             studentData.hunger += 3;
+            studentData.bladder += 2;
             if(studentData.readingsProgress >= 100) {
                 done = true;
             }

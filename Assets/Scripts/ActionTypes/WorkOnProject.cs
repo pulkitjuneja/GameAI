@@ -26,6 +26,7 @@ public class WorkOnProject : Action {
             studentData.projectWorkCompleted +=5;
             studentData.productivity -= 2;
             studentData.hunger += 3;
+            studentData.bladder += 2;
             if(studentData.projectWorkCompleted >= 100) {
                 done = true;
             }

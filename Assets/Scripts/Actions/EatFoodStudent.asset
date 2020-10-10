@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea870452ed04a3f4c84df919d5628284, type: 3}
   m_Name: EatFoodStudent
   m_EditorClassIdentifier: 
+  actionName: EatFoodStudent
   preconditions:
     m_keys:
     - HasCookedFood

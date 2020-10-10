@@ -24,6 +24,7 @@ public class AttendLecture : Action {
             Student studentData = agent.agentStateProvider as Student;
             studentData.lectureProgress +=5;
             studentData.productivity -= 3;
+            studentData.bladder += 2;
             studentData.hunger += 3;
             if(studentData.lectureProgress >= 100) {
                 done = true;

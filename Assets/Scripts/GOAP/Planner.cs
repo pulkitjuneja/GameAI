@@ -46,7 +46,8 @@ public class Planner
 				}
 				bool isVisited = visited.Contains(current);
 				if(!isVisited) {
-					foreach (Action action in availableActions) { 
+					List<Action> actionSubset = getActionSubset(availableActions, current);
+					foreach (Action action in actionSubset) { 
 						if(inState(action.Preconditions, current.state)) {
 							StringBoolDictionary nextState = populateState (current.state, action.Effects);
 							StateSearchNode nextNode = new StateSearchNode(current, current.runningCost+action.cost, nextState, action);
@@ -62,6 +63,16 @@ public class Planner
 	private bool inState(StringBoolDictionary test, StringBoolDictionary state) {
 		return  test.All(precondition => state.Contains(precondition));
 	}
+
+	private List<Action> getActionSubset (List<Action> availablActions, StateSearchNode node) {
+		List<Action> intersection = new List<Action>();
+		while(node!=null) {
+			intersection.Add(node.action);
+			node = node.parent;
+		}
+		return availablActions.Except(intersection).ToList();
+	}
+
 	
 	private StringBoolDictionary populateState(StringBoolDictionary currentState, StringBoolDictionary stateChange) {
 		StringBoolDictionary state = new StringBoolDictionary ();

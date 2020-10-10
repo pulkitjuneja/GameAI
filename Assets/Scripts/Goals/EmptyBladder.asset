@@ -9,21 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eace7001c513dfd46b063ab72190030b, type: 3}
-  m_Name: PlayGuitarStudent
+  m_Script: {fileID: 11500000, guid: c4e45fb7d36022d4b9ea3a694c8c5fcd, type: 3}
+  m_Name: EmptyBladder
   m_EditorClassIdentifier: 
-  actionName: PlayGuitarStudent
+  goalName: EmptyBladder
   preconditions:
     m_keys:
-    - GuitarPickedUp
-    m_values: 01
-  effects:
+    - projectWorkCompleted
+    m_values: 00
+  goalState:
     m_keys:
-    - IsProductive
-    m_values: 01
-  inRange: 0
-  cost: 1
-  target: {fileID: 0}
-  requiresRange: 1
-  done: 0
-  workDuration: 0.5
+    - HasToGo
+    - HandsClean
+    - IsWashRoomBeingUsed
+    m_values: 000100

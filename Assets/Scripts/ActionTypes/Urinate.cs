@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu (menuName = "GOAP/Actions/PlayGuitar")]
-public class PlayGuitar : Action {
-
+[CreateAssetMenu (menuName = "GOAP/Actions/Urinate")]
+public class Urinate : Action {
     public bool done;
     private float interval = 0.0f;
     public float workDuration = 0.5f;
+
     public override void reset() {
         done = false;
         interval = 0.0f;
@@ -22,13 +22,8 @@ public class PlayGuitar : Action {
         }
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
-            studentData.productivity +=5;
-            studentData.hunger += 3;
-            studentData.bladder += 2;
-            if(studentData.productivity >= 100) {
-                done = true;
-            }
-            interval = Time.time;
+            studentData.bladder = Mathf.Clamp(studentData.bladder - 100, 0, 100);
+            done = true;
         }
         return true;
     }
