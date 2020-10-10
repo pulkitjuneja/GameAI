@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 034f07cba16054b4f9ea1a449cef5758, type: 3}
+  m_Script: {fileID: 11500000, guid: 72d1b97ad4570b04bbd31a9bc5bf7466, type: 3}
   m_Name: DropOffGuitar
   m_EditorClassIdentifier: 
   preconditions:
@@ -27,3 +27,4 @@ MonoBehaviour:
   done: 0
   workDuration: 1
   toggle: 0
+  shouldEffectWorldState: 1

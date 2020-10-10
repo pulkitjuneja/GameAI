@@ -23,7 +23,8 @@ public class FinishReadings : Action {
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.readingsProgress +=5;
-            studentData.productivity -= 1;
+            studentData.productivity -= 2;
+            studentData.hunger += 3;
             if(studentData.readingsProgress >= 100) {
                 done = true;
             }

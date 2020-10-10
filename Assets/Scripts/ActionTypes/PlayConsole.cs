@@ -23,6 +23,7 @@ public class PlayConsole : Action {
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.productivity += 5;
+            studentData.hunger += 3;
             if(studentData.productivity >= 80) {
                 done = true;
             }

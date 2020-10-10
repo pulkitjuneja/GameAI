@@ -71,7 +71,7 @@ public abstract class Action : ScriptableObject {
 		}
 	}
 
-	public static string prettyPrint(Queue<Action> actions) {
+	public static string log(Queue<Action> actions) {
 		String s = "";
 		foreach (Action a in actions) {
 			s += a.GetType().Name;
@@ -81,7 +81,7 @@ public abstract class Action : ScriptableObject {
 		return s;
 	}
 
-	public static string prettyPrint(Action[] actions) {
+	public static string log(Action[] actions) {
 		String s = "";
 		foreach (Action a in actions) {
 			s += a.GetType().Name;
@@ -90,7 +90,7 @@ public abstract class Action : ScriptableObject {
 		return s;
 	}
 
-	public static string prettyPrint(Action action) {
+	public static string log(Action action) {
 		String s = ""+action.GetType().Name;
 		return s;
 	}

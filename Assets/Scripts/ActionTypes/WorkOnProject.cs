@@ -24,7 +24,8 @@ public class WorkOnProject : Action {
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.projectWorkCompleted +=5;
-            studentData.productivity -= 1;
+            studentData.productivity -= 2;
+            studentData.hunger += 3;
             if(studentData.projectWorkCompleted >= 100) {
                 done = true;
             }

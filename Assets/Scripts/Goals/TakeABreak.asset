@@ -22,4 +22,5 @@ MonoBehaviour:
     m_keys:
     - IsProductive
     - ConsoleOn
-    m_values: 0100
+    - GuitarPickedUp
+    m_values: 010000

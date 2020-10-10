@@ -70,7 +70,7 @@ public sealed class Agent : MonoBehaviour {
     return this.currentGoal.GoalState;
 	}
 
-	public static string prettyPrint(Dictionary<string, object> state) {
+	public static string log(Dictionary<string, object> state) {
 		String s = "";
 		foreach (KeyValuePair<string,object> kvp in state) {
 			s += kvp.Key + ":" + kvp.Value.ToString();

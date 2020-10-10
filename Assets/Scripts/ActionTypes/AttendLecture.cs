@@ -23,7 +23,8 @@ public class AttendLecture : Action {
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.lectureProgress +=5;
-            studentData.productivity -= 1;
+            studentData.productivity -= 3;
+            studentData.hunger += 3;
             if(studentData.lectureProgress >= 100) {
                 done = true;
             }

@@ -60,7 +60,7 @@ public class Planner
 	}
 
 	private bool inState(StringBoolDictionary test, StringBoolDictionary state) {
-		return test.All(precondition => state.Contains(precondition));
+		return  test.All(precondition => state.Contains(precondition));
 	}
 	
 	private StringBoolDictionary populateState(StringBoolDictionary currentState, StringBoolDictionary stateChange) {

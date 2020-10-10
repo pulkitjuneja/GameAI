@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72d1b97ad4570b04bbd31a9bc5bf7466, type: 3}
+  m_Name: TurnOffStove
+  m_EditorClassIdentifier: 
+  preconditions:
+    m_keys:
+    - StoveOn
+    m_values: 01
+  effects:
+    m_keys:
+    - StoveOn
+    m_values: 00
+  inRange: 0
+  cost: 1
+  target: {fileID: 0}
+  requiresRange: 1
+  done: 0
+  workDuration: 1
+  toggle: 0
+  shouldEffectWorldState: 1

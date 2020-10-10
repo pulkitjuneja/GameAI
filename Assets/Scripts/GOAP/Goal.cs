@@ -51,7 +51,7 @@ public class Goal: ScriptableObject {
 		}
 	}
 
-  public static string prettyPrint(Goal[] goals) {
+  public static string log(Goal[] goals) {
 		String s = "";
 		foreach (Goal goal in goals) {
 			s += goal.GetType().Name;
@@ -60,7 +60,7 @@ public class Goal: ScriptableObject {
 		return s;
 	}
 
-	public static string prettyPrint(Goal goal) {
+	public static string log(Goal goal) {
 		String s = ""+goal.GetType().Name;
 		return s;
 	}
