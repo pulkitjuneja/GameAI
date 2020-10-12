@@ -9,7 +9,7 @@ public abstract class GoapAgentData : MonoBehaviour
 	public List<GameObject> actionTargets;
 	public List<Goal> goals;
 	protected bool isMoving = false;
-
+	
 	public void addAction(Action a) {
 		availableActions.Add (a);
 	}

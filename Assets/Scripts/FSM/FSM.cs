@@ -12,7 +12,7 @@ public class FSM {
 
 	private Stack<FSMState> stateStack = new Stack<FSMState> ();
 
-	public void Update (Agent agent) {
+ public void Update (Agent agent) {
 		if (stateStack.Peek() != null)
 			stateStack.Peek().Update (this, agent);
 	}

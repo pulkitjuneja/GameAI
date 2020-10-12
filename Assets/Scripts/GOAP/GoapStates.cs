@@ -3,7 +3,8 @@ using UnityEngine;
 using System.Collections;
 
 public class IdleState: FSMState {
-		private float replanCheckDiff = 0.0f;
+	 private float replanCheckDiff = 0.0f;
+
    public void Update (FSM fsm, Agent agent) {
 		 Debug.Log("Out");
 		 	if(Time.time - replanCheckDiff > agent.replanCheckInterval) {
@@ -47,6 +48,7 @@ public class MoveToState : FSMState {
 
 public class PerformActionState : FSMState {
 	private float replanCheckDiff = 0.0f;
+	
   public void Update (FSM fsm, Agent agent) {
     	if (!agent.hasActionPlan()) {
 				fsm.popState();

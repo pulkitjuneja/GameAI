@@ -9,8 +9,7 @@ using System.Linq;
 		public StringBoolDictionary state;
 		public Action action;
 
-		public int CompareTo(StateSearchNode other)
-    {
+    public int CompareTo(StateSearchNode other) {
       if (this.runningCost < other.runningCost) return -1;
       else if (this.runningCost > other.runningCost) return 1;
       else return 0;

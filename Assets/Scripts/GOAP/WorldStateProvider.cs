@@ -4,18 +4,7 @@ using UnityEngine;
 
 public class WorldStateProvider: MonoBehaviour {
   public StringBoolDictionary worldState;
-
-  // void Start () {
-  //   setInitialWorldState();
-  // }
-
-  // void setInitialWorldState () {
-  //       worldState = new StringBoolDictionary() {
-  //         {"WorkStationOn", false}
-  //       };
-  // }
-
-  public void changeWorldState (string key, bool value) {
+    public void changeWorldState (string key, bool value) {
     if(worldState.ContainsKey(key)) {
       worldState[key] = value;
     } else {

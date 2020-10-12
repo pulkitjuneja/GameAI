@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-public class Planner
-{
+public class Planner {
+	
 	public Queue<Action> plan(Agent agent, List<Action> availableActions, StringBoolDictionary worldState,  StringBoolDictionary goal) 
 	{
 		foreach (Action a in availableActions) {
