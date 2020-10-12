@@ -17,7 +17,9 @@ MonoBehaviour:
     m_keys:
     - lectureCompleted
     - WorkStationOn
-    m_values: 0101
+    - IsProductive
+    - RequiresFood
+    m_values: 01010100
   effects:
     m_keys:
     - readingsCompleted

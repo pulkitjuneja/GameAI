@@ -39,7 +39,7 @@ public abstract class GoapAgentData : MonoBehaviour
 		}
 	}
 
-	void Start () {
+	protected virtual void Start () {
 		createInitialState();
 		attachActionTargets();
 	}
@@ -47,7 +47,6 @@ public abstract class GoapAgentData : MonoBehaviour
 	// public abstract void createGoals();
 	public abstract void createInitialState ();
 	public abstract StringBoolDictionary getAgentState ();
-	public abstract void planAborted (Action aborter);
 	public abstract bool moveAgent(Action nextAction);
 }
 

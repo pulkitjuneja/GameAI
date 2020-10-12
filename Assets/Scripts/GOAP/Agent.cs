@@ -16,6 +16,7 @@ public sealed class Agent : MonoBehaviour {
 	public Planner planner;
 	public Goal currentGoal;
 	public float replanCheckInterval;
+	public AgentUIController agentUIController;
 
 
 	void Start () {
@@ -50,6 +51,11 @@ public sealed class Agent : MonoBehaviour {
 		return agentState;
 	}
 
+	public void setCurrentGoal (Goal goal) {
+		this.currentGoal = goal;
+		this.agentUIController.updateCurrentGoalUI(goal);
+	}
+
 	public bool isPlanStillValid() {
 		StringBoolDictionary worldState = this.getCurrentState();
 		StringBoolDictionary preconditions = this.currentGoal.preconditions;
@@ -61,12 +67,12 @@ public sealed class Agent : MonoBehaviour {
 		foreach (Goal goal in agentStateProvider.goals) {
       bool instate = goal.preconditions.All(pre => worldState.ContainsKey(pre.Key) && worldState[pre.Key] == pre.Value);
       if(instate) {
-				this.currentGoal = goal;
+				setCurrentGoal(goal);
         return goal.GoalState;
       }
     }
     // If no goal was found to match return the least priority goal
-		this.currentGoal = agentStateProvider.goals[agentStateProvider.goals.Count -1];
+		setCurrentGoal(agentStateProvider.goals[agentStateProvider.goals.Count -1]);
     return this.currentGoal.GoalState;
 	}
 

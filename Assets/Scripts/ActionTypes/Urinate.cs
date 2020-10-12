@@ -23,6 +23,7 @@ public class Urinate : Action {
         if(Time.time - interval > workDuration) {
             Student studentData = agent.agentStateProvider as Student;
             studentData.bladder = Mathf.Clamp(studentData.bladder - 100, 0, 100);
+            studentData.updateStatsUI();
             done = true;
         }
         return true;

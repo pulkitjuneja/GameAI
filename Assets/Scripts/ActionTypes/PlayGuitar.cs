@@ -25,6 +25,7 @@ public class PlayGuitar : Action {
             studentData.productivity +=5;
             studentData.hunger += 3;
             studentData.bladder += 2;
+            studentData.updateStatsUI();
             if(studentData.productivity >= 100) {
                 done = true;
             }

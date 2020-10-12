@@ -11,6 +11,11 @@ public class Student : GoapAgentData {
   public int projectWorkCompleted;
   public List<string> inventory;
 
+  public StudentUIController studentUIController;
+
+  // UI Elements for agent
+  // TODO: move this to a ui Manger scrip
+
 
   public override void createInitialState() {
     // bladder = 0;
@@ -30,8 +35,26 @@ public class Student : GoapAgentData {
     agentState.Add("projectWorkCompleted", projectWorkCompleted > 100 ? true : false);
     return agentState;
   }
-  public override void planAborted(Action aborter) { }
-  
+
+  public void addInventoryItem (string item) {
+    this.inventory.Add(item);
+    studentUIController.updateInventoryUI(inventory);
+  }
+
+  public void removeInventoryItem (string item) {
+    this.inventory.Remove(item);
+    studentUIController.updateInventoryUI(inventory);
+  }
+
+  public void updateStatsUI() {
+    studentUIController.updateAgentStats(this);
+  }
+
+  protected override void Start() {
+    base.Start();
+    updateStatsUI();
+  }
+
 	public override bool moveAgent(Action nextAction){
     NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>() as NavMeshAgent;
     Vector3 targetPositionInPlane = new Vector3(nextAction.target.transform.position.x, 0, nextAction.target.transform.position.z);

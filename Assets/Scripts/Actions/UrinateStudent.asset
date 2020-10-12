@@ -15,8 +15,9 @@ MonoBehaviour:
   actionName: UrinateStudent
   preconditions:
     m_keys:
+    - GuitarPickedUp
     - IsWashRoomBeingUsed
-    m_values: 00
+    m_values: 0000
   effects:
     m_keys:
     - HandsClean

@@ -26,6 +26,6 @@ MonoBehaviour:
   target: {fileID: 0}
   requiresRange: 1
   done: 0
-  workDuration: 1
+  workDuration: 3
   toggle: 1
   shouldEffectWorldState: 0

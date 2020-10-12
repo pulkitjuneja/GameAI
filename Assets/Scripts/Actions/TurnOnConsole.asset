@@ -16,7 +16,8 @@ MonoBehaviour:
   preconditions:
     m_keys:
     - ConsoleOn
-    m_values: 00
+    - RequiresFood
+    m_values: 0000
   effects:
     m_keys:
     - ConsoleOn

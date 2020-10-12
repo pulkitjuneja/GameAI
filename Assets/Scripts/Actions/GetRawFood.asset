@@ -27,5 +27,5 @@ MonoBehaviour:
   requiresRange: 1
   done: 0
   workDuration: 1
-  toggle: 0
+  toggle: 1
   shouldEffectWorldState: 0

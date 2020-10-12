@@ -49,7 +49,6 @@ public class PerformActionState : FSMState {
 	private float replanCheckDiff = 0.0f;
   public void Update (FSM fsm, Agent agent) {
     	if (!agent.hasActionPlan()) {
-				Debug.Log("Done action");
 				fsm.popState();
 				fsm.pushState(agent.idleState);
 				return;
@@ -76,7 +75,6 @@ public class PerformActionState : FSMState {
 					Debug.Log("Plan Failed");
 					fsm.popState();
 					fsm.pushState(agent.idleState);
-					agent.agentStateProvider.planAborted(action);
 				}
 			} else {
 				fsm.pushState(agent.moveToState);

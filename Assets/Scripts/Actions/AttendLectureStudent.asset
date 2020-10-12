@@ -15,8 +15,10 @@ MonoBehaviour:
   actionName: AttendLectureStudent
   preconditions:
     m_keys:
+    - IsProductive
     - WorkStationOn
-    m_values: 01
+    - RequiresFood
+    m_values: 010100
   effects:
     m_keys:
     - lectureCompleted

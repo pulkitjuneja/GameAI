@@ -16,6 +16,7 @@ public class UseComponentAction : Action {
 
     public override void reset() {
         done = false;
+        interval = 0.0f;
     }
 
     public override bool isDone() {
@@ -27,16 +28,15 @@ public class UseComponentAction : Action {
             interval = Time.time;
         }
         if(Time.time - interval > workDuration) {
-          Debug.Log(target);
           ToggleAbleComponent component = target.GetComponent<ToggleAbleComponent>();
           component.toggle(toggle);
           PickableComponent pickupComponent = target.GetComponent<PickableComponent>();
           if(pickupComponent != null) {
             if(agent.agentStateProvider is Student) {
               if(toggle) {
-               (agent.agentStateProvider as Student).inventory.Add(pickupComponent.pickupObjectName); 
+               (agent.agentStateProvider as Student).addInventoryItem(pickupComponent.pickupObjectName); 
               } else {
-               (agent.agentStateProvider as Student).inventory.Remove(pickupComponent.pickupObjectName); 
+               (agent.agentStateProvider as Student).removeInventoryItem(pickupComponent.pickupObjectName); 
               }
             } else {
               Debug.Log("Agent does not have an inventory");

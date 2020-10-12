@@ -26,6 +26,7 @@ public class AttendLecture : Action {
             studentData.productivity -= 3;
             studentData.bladder += 2;
             studentData.hunger += 3;
+            studentData.updateStatsUI();
             if(studentData.lectureProgress >= 100) {
                 done = true;
             }
