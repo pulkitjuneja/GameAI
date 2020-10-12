@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableComponent : ToggleAbleComponent
+public class PickableComponent : UsableComponent
 {
     public Renderer meshRenderer;
     public bool hideMeshOnPickup;

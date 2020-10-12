@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public abstract class ToggleAbleComponent : MonoBehaviour
+public abstract class UsableComponent : MonoBehaviour
 {
   public abstract void toggle (bool toggle);
 

@@ -39,13 +39,16 @@ public abstract class GoapAgentData : MonoBehaviour
 		}
 	}
 
+
 	protected virtual void Start () {
 		createInitialState();
 		attachActionTargets();
 	}
 
-	// public abstract void createGoals();
 	public abstract void createInitialState ();
+
+	// This would probably not be a part of any normal GOAP based AI. but adding this for convenience for this project
+	public abstract bool hasReachedGoalState ();
 	public abstract StringBoolDictionary getAgentState ();
 	public abstract bool moveAgent(Action nextAction);
 }

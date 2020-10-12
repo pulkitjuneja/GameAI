@@ -6,14 +6,16 @@ public class IdleState: FSMState {
 	 private float replanCheckDiff = 0.0f;
 
    public void Update (FSM fsm, Agent agent) {
-		 Debug.Log("Out");
-		 	if(Time.time - replanCheckDiff > agent.replanCheckInterval) {
-				 		 Debug.Log("In");
+		 	bool hasAgentReachedGoalState = agent.agentStateProvider.hasReachedGoalState();
+		 	if(Time.time - replanCheckDiff > agent.replanCheckInterval && !hasAgentReachedGoalState) {
+			float planningStartTime = Time.realtimeSinceStartup;
 			StringBoolDictionary worldState = agent.getCurrentState();
 			StringBoolDictionary goal = agent.getPrioritizedGoalState(worldState);
 
 			Queue<Action> plan = agent.planner.plan(agent, agent.agentStateProvider.availableActions, worldState, goal);
-					 Debug.Log("Planned");
+			Debug.Log("Planned");
+			float diffTime = Time.time - planningStartTime;
+			Debug.Log(diffTime);
 			if (plan != null && plan.Count > 0) {
 				agent.currentActions = plan;
 

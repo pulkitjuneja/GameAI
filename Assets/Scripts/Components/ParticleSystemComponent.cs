@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParticleSystemComponent : ToggleAbleComponent
+public class ParticleSystemComponent : UsableComponent
 {
     public ParticleSystem particleSystem;
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class ScreensComponent : ToggleAbleComponent
+public class ScreensComponent : UsableComponent
 {
     public List<Renderer> screenPlanes;
 

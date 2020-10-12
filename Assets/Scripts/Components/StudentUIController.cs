@@ -13,6 +13,12 @@ public class StudentUIController : AgentUIController {
   public Image ProjectProgress;
   public Text inventoryText;
 
+  public GameObject gameOverPanel;
+
+  void Start () {
+    gameOverPanel.SetActive(false);
+  }
+
   public void updateAgentStats(Student student) {
     HungerMeter.fillAmount = (float)student.hunger/100.0f;
     BladderMeter.fillAmount = (float)student.bladder/100.0f;
@@ -28,6 +34,12 @@ public class StudentUIController : AgentUIController {
       inventoryString += item+", ";
     }
     inventoryText.text = inventoryString;
+  }
+
+  public void displayGameOverPanel () {
+    if(!gameOverPanel.active) {
+      gameOverPanel.SetActive(true);
+    }
   }
 
 }

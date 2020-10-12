@@ -28,7 +28,7 @@ public class UseComponentAction : Action {
             interval = Time.time;
         }
         if(Time.time - interval > workDuration) {
-          ToggleAbleComponent component = target.GetComponent<ToggleAbleComponent>();
+          UsableComponent component = target.GetComponent<UsableComponent>();
           component.toggle(toggle);
           PickableComponent pickupComponent = target.GetComponent<PickableComponent>();
           if(pickupComponent != null) {
