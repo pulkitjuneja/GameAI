@@ -17,7 +17,8 @@ MonoBehaviour:
     m_keys:
     - HasCookedFood
     - StoveOn
-    m_values: 0100
+    - HasToGo
+    m_values: 010000
   effects:
     m_keys:
     - RequiresFood

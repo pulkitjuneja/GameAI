@@ -16,7 +16,8 @@ MonoBehaviour:
   preconditions:
     m_keys:
     - StoveOn
-    m_values: 01
+    - HasToGo
+    m_values: 0100
   effects:
     m_keys:
     - StoveOn

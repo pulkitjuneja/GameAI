@@ -17,7 +17,9 @@ MonoBehaviour:
     m_keys:
     - HasRawFood
     - StoveOn
-    m_values: 0101
+    - HasToGo
+    - RequiresFood
+    m_values: 01010001
   effects:
     m_keys:
     - HasRawFood

@@ -1,2 +1,352 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AttendLecture">
+    <Position X="0.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\AttendLecture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CookFood">
+    <Position X="5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\CookFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EatFood">
+    <Position X="9.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\EatFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinishReadings">
+    <Position X="11.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\FinishReadings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayConsole">
+    <Position X="14" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\PlayConsole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayGuitar">
+    <Position X="16.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\PlayGuitar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Urinate">
+    <Position X="18.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\Urinate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UseComponentAction">
+    <Position X="2.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAgAAAAAAAAACAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\UseComponentAction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WorkOnProject">
+    <Position X="7.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAGQEAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ActionTypes\WorkOnProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Student">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEDCAAAAACAAAAAAAACAAAAgAIQAAAACAAAABIoCAAI=</HashCode>
+      <FileName>Assets\Scripts\Agents\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AgentUIController">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAEAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\AgentUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AgentUIController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CameraFollowComponent">
+    <Position X="6.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAQQAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\CameraFollowComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ParticleSystemComponent" Collapsed="true">
+    <Position X="2.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAACAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\ParticleSystemComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PickableComponent" Collapsed="true">
+    <Position X="5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAEAAACAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\PickableComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScreensComponent" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\ScreensComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StudentUIController">
+    <Position X="8.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQBACAAAAAABAAAgACAAAABAIABAAAQAgIAEAA=</HashCode>
+      <FileName>Assets\Scripts\Components\StudentUIController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="StudentUIController" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="UsableComponent" Collapsed="true">
+    <Position X="2.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Components\UsableComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FSM">
+    <Position X="12.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAACAAAAEAAAAAIAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\FSM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="stateMachine" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Action">
+    <Position X="9.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAAAABnAAAAACAAsAQESIEEAEAQAIAAAAAACIIAAAg=</HashCode>
+      <FileName>Assets\Scripts\GOAP\Action.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="availableActions" />
+      <Property Name="currentActions" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Agent">
+    <Position X="14" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAiCggCAAAAgACAEAIAAAAhACAACAAgQQAAQ=</HashCode>
+      <FileName>Assets\Scripts\GOAP\Agent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goal">
+    <Position X="11" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAEAAAAAEAABSIAAAUAAAIAAAAAkAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\Goal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="goals" />
+      <Property Name="CurrentGoal" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="GoapAgentData">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ALDAAABAACAAAAAAQIAAAAAAAAAAAAAAAAAhBAIIBAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\GoapAgentData.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AgentStateProvider" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="IdleState" BaseTypeListCollapsed="true">
+    <Position X="17.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\GoapStates.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="IdleState" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="1.3" Collapsed="true" />
+  </Class>
+  <Class Name="MoveToState" BaseTypeListCollapsed="true">
+    <Position X="19.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\GoapStates.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="moveToState" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.154" Collapsed="true" />
+  </Class>
+  <Class Name="PerformActionState" BaseTypeListCollapsed="true">
+    <Position X="21.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\GoapStates.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="performStateAction" />
+    </ShowAsAssociation>
+    <Lollipop Orientation="Bottom" Position="0.215" Collapsed="true" />
+  </Class>
+  <Class Name="Planner">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAIAAACAAAAEgEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\Planner.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Planner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StateSearchNode" BaseTypeListCollapsed="true">
+    <Position X="22.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAAAARAgAAAAAAAEAAAAIAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\StateSearchNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Planner" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="WorldStateProvider">
+    <Position X="15.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAABAAAAAAAAAAAAAAAAAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GOAP\WorldStateProvider.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WorldStateProvider" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PriorityQueue&lt;T&gt;">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAEAAAEAAAAAAQAEAAABAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\PriorityQueue.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Planner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="StringBoolDictionary" Collapsed="true">
+    <Position X="40.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Utilities\StringBoolDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionaryExample" Collapsed="true">
+    <Position X="30" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAABEQAAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\SerializableDictionaryExample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringStringDictionary" Collapsed="true">
+    <Position X="45.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectColorDictionary" Collapsed="true">
+    <Position X="47.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorArrayStorage" Collapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringColorArrayDictionary" Collapsed="true">
+    <Position X="49.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyClass" Collapsed="true">
+    <Position X="29.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuaternionMyClassDictionary" Collapsed="true">
+    <Position X="43" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\Example\UserSerializableDictionaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionaryBase&lt;TKey, TValue, TValueStorage&gt;" Collapsed="true">
+    <Position X="45.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAIEAAAiAAAAAAACAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SerializableDictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="44.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionary" Collapsed="true">
+    <Position X="29.25" Y="2.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="SerializableDictionary.Storage&lt;T&gt;" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\SerializableDictionary\SerializableDictionary.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SerializableDictionary&lt;TKey, TValue, TValueStorage&gt;" Collapsed="true">
+    <Position X="49.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\SerializableDictionary\SerializableDictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="FSMState">
+    <Position X="19.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\FSM\FsmState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
