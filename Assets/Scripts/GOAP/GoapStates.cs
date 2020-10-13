@@ -14,7 +14,7 @@ public class IdleState: FSMState {
 
 			Queue<Action> plan = agent.planner.plan(agent, agent.agentStateProvider.availableActions, worldState, goal);
 			Debug.Log("Planned");
-			float diffTime = Time.time - planningStartTime;
+			float diffTime = Time.realtimeSinceStartup - planningStartTime;
 			Debug.Log(diffTime);
 			if (plan != null && plan.Count > 0) {
 				agent.currentActions = plan;

@@ -16,7 +16,9 @@ MonoBehaviour:
   preconditions:
     m_keys:
     - GuitarPickedUp
-    m_values: 01
+    - RequiresFood
+    - HasToGo
+    m_values: 010000
   effects:
     m_keys:
     - IsProductive

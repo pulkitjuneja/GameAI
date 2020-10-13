@@ -18,7 +18,8 @@ MonoBehaviour:
     - ConsoleOn
     - RequiresFood
     - HasToGo
-    m_values: 000000
+    - IsProductive
+    m_values: 00000000
   effects:
     m_keys:
     - ConsoleOn
