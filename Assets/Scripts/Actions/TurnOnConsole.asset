@@ -17,7 +17,8 @@ MonoBehaviour:
     m_keys:
     - ConsoleOn
     - RequiresFood
-    m_values: 0000
+    - HasToGo
+    m_values: 000000
   effects:
     m_keys:
     - ConsoleOn
