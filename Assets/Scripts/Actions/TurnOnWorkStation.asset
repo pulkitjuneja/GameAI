@@ -16,16 +16,19 @@ MonoBehaviour:
   preconditions:
     m_keys:
     - WorkStationOn
-    m_values: 00
+    - HasToGo
+    - RequiresFood
+    - IsProductive
+    m_values: 00000001
   effects:
     m_keys:
     - WorkStationOn
     m_values: 01
-  inRange: 0
+  inRange: 1
   cost: 1
   target: {fileID: 0}
   requiresRange: 1
-  done: 0
+  done: 1
   workDuration: 1
   toggle: 1
   shouldEffectWorldState: 1

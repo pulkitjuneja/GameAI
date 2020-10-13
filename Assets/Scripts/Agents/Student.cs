@@ -55,6 +55,14 @@ public class Student : GoapAgentData {
     updateStatsUI();
   }
 
+  public override bool hasReachedGoalState () {
+    if(projectWorkCompleted > 100) {
+      studentUIController.displayGameOverPanel();
+      return true;
+    }
+    return false;
+  }
+
 	public override bool moveAgent(Action nextAction){
     NavMeshAgent navMeshAgent = GetComponent<NavMeshAgent>() as NavMeshAgent;
     Vector3 targetPositionInPlane = new Vector3(nextAction.target.transform.position.x, 0, nextAction.target.transform.position.z);

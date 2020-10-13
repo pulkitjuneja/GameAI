@@ -20,14 +20,15 @@ MonoBehaviour:
     - WorkStationOn
     - IsProductive
     - RequiresFood
-    m_values: 0101010100
+    - HasToGo
+    m_values: 010101010000
   effects:
     m_keys:
     - projectWorkCompleted
     m_values: 01
-  inRange: 0
+  inRange: 1
   cost: 1
   target: {fileID: 0}
   requiresRange: 1
-  done: 0
+  done: 1
   workDuration: 0.5
