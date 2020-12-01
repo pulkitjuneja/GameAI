@@ -7,7 +7,7 @@
 * Object placement and vegetation
 
 ## Instructions to run the generation
-* The scene included with the project has a `ChunkedPlanetBodyGenerator` script attached to it.
+* The scene included with the project has a GameObject with a `ChunkedPlanetBodyGenerator` script attached to it.
 * changing any parameter of the script will cause the planet to regenerate
 * Trees are only generated in play mode 
 * Or you can just enter the play mode and hte planet will generate itself
