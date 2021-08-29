@@ -5,6 +5,7 @@
 * Fully configurable biome generation
 * Dynamic LOD switching
 * Object placement and vegetation
+* Triplanar Texture mapping 
 
 ## Instructions to run the generation
 * The scene included with the project has a GameObject with a `ChunkedPlanetBodyGenerator` script attached to it.
